@@ -12,6 +12,11 @@
                     <span>Home</span>
                 </mat-list-item>
                 <mat-divider></mat-divider>
+                <mat-list-item (click)="close()" routerLink="/core/layout/todo" routerLinkActive="active">
+                    <mat-icon matListIcon>link</mat-icon>
+                    <span>Todo</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
                 <mat-list-item routerLinkActive="active">
                     <mat-icon matListIcon>logout</mat-icon>
                     <span>Logout</span>

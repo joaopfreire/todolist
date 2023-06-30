@@ -10,6 +10,7 @@ const routes: Routes = [
     path: 'layout', component: LayoutContainer, children: [
       {path: '', pathMatch: 'full', redirectTo: 'home'},
       {path: 'home', component: HomeContainer},
+      {path: 'todo', loadChildren: () => import('../todo/todo.module').then(m => m.TodoModule)},
     ]
   },
 ];
