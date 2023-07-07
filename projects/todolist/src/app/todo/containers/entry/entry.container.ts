@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TodoState } from '../../store/reducers/feature.reducer';
-import { Store } from '@ngrx/store';
+import { Action, Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-entry',
@@ -13,6 +13,10 @@ export class EntryContainer implements OnInit {
   constructor(private store: Store<TodoState>) { }
 
   ngOnInit(): void {
+  }
+  
+  dispatch(action: Action): void {
+      this.store.dispatch(action);
   }
 
 }
