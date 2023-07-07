@@ -1,5 +1,7 @@
 @import "./containers/entry/entry.container.theme";
+@import "./components/list/list.component.theme";
 
 @mixin todo-theme($theme) {
   @include app-entry-container-theme($theme);
+  @include app-list-component-theme($theme);
 }
